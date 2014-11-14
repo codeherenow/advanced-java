@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore;
+package com.codeherenow.bookstore.models;
 
 /**
  * POJO representing a Book entity.

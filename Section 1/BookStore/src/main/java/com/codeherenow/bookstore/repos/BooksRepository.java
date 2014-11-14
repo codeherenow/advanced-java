@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore;
+package com.codeherenow.bookstore.repos;
+
+import com.codeherenow.bookstore.models.Book;
 
 import java.util.ArrayList;
 import java.util.List;

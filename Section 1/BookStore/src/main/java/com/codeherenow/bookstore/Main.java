@@ -16,10 +16,12 @@
 
 package com.codeherenow.bookstore;
 
+import com.codeherenow.bookstore.ui.BookStoreWindow;
+
 import javax.swing.*;
 
 /**
- * This is the entry point of the application. This class creates a new {@link com.codeherenow.bookstore.BookStoreWindow}
+ * This is the entry point of the application. This class creates a new {@link com.codeherenow.bookstore.ui.BookStoreWindow}
  * and makes it visible.
  *
  * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
