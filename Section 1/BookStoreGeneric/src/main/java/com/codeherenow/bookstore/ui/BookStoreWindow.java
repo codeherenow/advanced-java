@@ -14,7 +14,11 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore;
+package com.codeherenow.bookstore.ui;
+
+import com.codeherenow.bookstore.models.Book;
+import com.codeherenow.bookstore.repos.BooksRepository;
+import com.codeherenow.bookstore.tables.BooksGenericTableModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +26,7 @@ import java.util.List;
 
 /**
  * This class displays is responsible for rendering the UI for the application. It houses a {@link javax.swing.JTable}
- * inside a {@link javax.swing.JScrollPane} that displays few rows of {@link com.codeherenow.bookstore.Book}s.
+ * inside a {@link javax.swing.JScrollPane} that displays few rows of {@link com.codeherenow.bookstore.models.Book}s.
  *
  * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
  */
@@ -58,10 +62,17 @@ public class BookStoreWindow extends JFrame {
         JScrollPane booksScrollPane = new JScrollPane(booksTable);
         add(booksScrollPane);
 
-        // Create a Table Model and display data
+        // Create a table model and display data
+        String[] columns = new String[]{
+                "Title",
+                "Author",
+                "ISBN",
+                "Price"
+        };
         List<Book> books = BooksRepository.getBooks();
-        BooksTableModel booksTableModel = new BooksTableModel(books);
-        booksTable.setModel(booksTableModel);
+
+        BooksGenericTableModel booksGenericTableModel = new BooksGenericTableModel(columns, books);
+        booksTable.setModel(booksGenericTableModel);
     }
 
 }

@@ -14,15 +14,19 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore;
+package com.codeherenow.bookstore.tables;
+
+import com.codeherenow.bookstore.models.Book;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 import java.util.Vector;
 
 /**
+ * NOTE: This class exists in this example ONLY for REFERENCE. It's not used anywhere in this project.
+ *
  * An extension of the {@link javax.swing.table.DefaultTableModel}, that takes care of converting
- * {@link Book} into row data for the {@link javax.swing.JTable}.
+ * {@link com.codeherenow.bookstore.models.Book} into row data for the {@link javax.swing.JTable}.
  *
  * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
  */
