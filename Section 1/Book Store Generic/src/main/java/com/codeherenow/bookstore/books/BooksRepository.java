@@ -16,8 +16,6 @@
 
 package com.codeherenow.bookstore.books;
 
-import com.codeherenow.bookstore.books.Book;
-
 import java.util.Arrays;
 import java.util.List;
 
