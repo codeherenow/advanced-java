@@ -28,7 +28,7 @@ import java.util.List;
  * This class displays is responsible for rendering the UI for the application. It houses a {@link javax.swing.JTable}
  * inside a {@link javax.swing.JScrollPane} that displays few rows of {@link com.codeherenow.bookstore.models.Book}s.
  *
- * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
+ * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public class BookStoreWindow extends JFrame {
     private static final int WIDTH = 800;
@@ -36,7 +36,7 @@ public class BookStoreWindow extends JFrame {
 
     public BookStoreWindow(String title) {
         // Exit the app if 'X' button is pressed
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Set properties
         setTitle(title);

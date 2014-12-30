@@ -26,7 +26,7 @@ import java.util.Vector;
  * An extension of the {@link javax.swing.table.DefaultTableModel}, that takes care of converting
  * {@link com.codeherenow.bookstore.models.Book} into row data for the {@link javax.swing.JTable}.
  *
- * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
+ * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public class BooksTableModel extends DefaultTableModel {
 

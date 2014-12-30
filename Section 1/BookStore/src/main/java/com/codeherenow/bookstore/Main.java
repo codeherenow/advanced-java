@@ -24,7 +24,7 @@ import javax.swing.*;
  * This is the entry point of the application. This class creates a new {@link com.codeherenow.bookstore.ui.BookStoreWindow}
  * and makes it visible.
  *
- * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
+ * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public class Main {
 
