@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore.tables;
+package com.codeherenow.bookstore.books;
 
-import com.codeherenow.bookstore.models.Book;
+import com.codeherenow.bookstore.common.GenericTableModel;
 
 import java.util.List;
 
 /**
  * This adapter has no code for managing rows and columns on its own. It extends the
- * {@link com.codeherenow.bookstore.tables.GenericTableModel} and override a convenience method that returns a value
+ * {@link com.codeherenow.bookstore.common.GenericTableModel} and override a convenience method that returns a value
  * for the given column.
  *
  * @author Ragunath Jawahar <www.codeherenow.com>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore.tables;
+package com.codeherenow.bookstore.common;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- * This is an improved version (albeit teeny tiny :P) of the {@link com.codeherenow.bookstore.tables.BooksTableModel}.
+ * This is an improved (albeit teeny tiny :P) version of the {@link com.codeherenow.bookstore.common.BooksTableModel}.
  * Since this is a generic class, you can use it with any POJO. Just extend it and implement the
  * 'getValue(String, T)' method.
  *

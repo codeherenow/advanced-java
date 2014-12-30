@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.codeherenow.bookstore.ui;
+package com.codeherenow.bookstore.books;
 
-import com.codeherenow.bookstore.models.Book;
-import com.codeherenow.bookstore.repos.BooksRepository;
-import com.codeherenow.bookstore.tables.BooksGenericTableModel;
+import com.codeherenow.bookstore.books.Book;
+import com.codeherenow.bookstore.books.BooksRepository;
+import com.codeherenow.bookstore.books.BooksGenericTableModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,15 +26,15 @@ import java.util.List;
 
 /**
  * This class displays is responsible for rendering the UI for the application. It houses a {@link javax.swing.JTable}
- * inside a {@link javax.swing.JScrollPane} that displays few rows of {@link com.codeherenow.bookstore.models.Book}s.
+ * inside a {@link javax.swing.JScrollPane} that displays few rows of {@link com.codeherenow.bookstore.books.Book}s.
  *
  * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
  */
-public class BookStoreWindow extends JFrame {
+public class BooksWindow extends JFrame {
     private static final int WIDTH = 800;
     private static final int HEIGHT = 400;
 
-    public BookStoreWindow(String title) {
+    public BooksWindow(String title) {
         // Exit the app if 'X' button is pressed
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
