@@ -19,7 +19,7 @@ package com.codeherenow.bookstore.models;
 /**
  * POJO representing a Book entity.
  *
- * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
+ * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public class Book {
     private String title;

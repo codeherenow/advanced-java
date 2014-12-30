@@ -36,7 +36,7 @@ public class BookStoreWindow extends JFrame {
 
     public BookStoreWindow(String title) {
         // Exit the app if 'X' button is pressed
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Set properties
         setTitle(title);

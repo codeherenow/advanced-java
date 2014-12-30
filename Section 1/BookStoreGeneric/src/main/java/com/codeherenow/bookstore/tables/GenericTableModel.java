@@ -26,7 +26,7 @@ import java.util.Vector;
  * Since this is a generic class, you can use it with any POJO. Just extend it and implement the
  * 'getValue(String, T)' method.
  *
- * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
+ * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public abstract class GenericTableModel<T> extends DefaultTableModel {
     protected List<T> mPojos;

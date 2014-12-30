@@ -25,7 +25,7 @@ import java.util.List;
  * {@link com.codeherenow.bookstore.tables.GenericTableModel} and override a convenience method that returns a value
  * for the given column.
  *
- * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
+ * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public class BooksGenericTableModel extends GenericTableModel<Book> {
 
