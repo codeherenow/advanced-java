@@ -16,12 +16,12 @@
 
 package com.codeherenow.bookstore;
 
-import com.codeherenow.bookstore.ui.BookStoreWindow;
+import com.codeherenow.bookstore.books.BooksWindow;
 
 import javax.swing.*;
 
 /**
- * This is the entry point of the application. This class creates a new {@link com.codeherenow.bookstore.ui.BookStoreWindow}
+ * This is the entry point of the application. This class creates a new {@link com.codeherenow.bookstore.books.BooksWindow}
  * and makes it visible.
  *
  * @author Ragunath Jawahar <www.codeherenow.com>
@@ -33,7 +33,7 @@ public class Main {
 
             @Override
             public void run() {
-                new BookStoreWindow("Toy Book Store").setVisible(true);
+                new BooksWindow("Toy Book Store").setVisible(true);
             }
         });
 
