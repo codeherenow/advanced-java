@@ -16,10 +16,6 @@
 
 package com.codeherenow.bookstore.books;
 
-import com.codeherenow.bookstore.books.Book;
-import com.codeherenow.bookstore.books.BooksRepository;
-import com.codeherenow.bookstore.books.BooksTableModel;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;

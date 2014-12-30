@@ -16,8 +16,6 @@
 
 package com.codeherenow.bookstore.books;
 
-import com.codeherenow.bookstore.books.Book;
-
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 import java.util.Vector;
