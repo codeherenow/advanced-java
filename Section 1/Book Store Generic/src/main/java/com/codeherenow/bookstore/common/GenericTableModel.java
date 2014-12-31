@@ -17,39 +17,33 @@
 package com.codeherenow.bookstore.common;
 
 import javax.swing.table.DefaultTableModel;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
 /**
- * This is an improved (albeit teeny tiny :P) version of the {@link com.codeherenow.bookstore.common.BooksTableModel}.
+ * This is an improved (albeit teeny tiny :P) version of the older {@code BooksTableModel}.
  * Since this is a generic class, you can use it with any POJO. Just extend it and implement the
  * 'getValue(String, T)' method.
  *
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public abstract class GenericTableModel<T> extends DefaultTableModel {
-    protected List<T> mPojos;
 
     public GenericTableModel(String[] columns, List<T> pojos) {
         if (columns == null || columns.length == 0) {
             throw new IllegalArgumentException("Specify at least one column.");
         }
+
         // Add columns
         setColumnIdentifiers(columns);
 
-        // Initialization
-        mPojos = new ArrayList<T>();
-
         // Add rows
-        for (T rowData : pojos) {
-            addRow(rowData);
+        for (T pojo : pojos) {
+            addRow(pojo);
         }
     }
 
     public final void addRow(T rowData) {
-        mPojos.add(rowData);
-
         Vector row = new Vector();
         for (Object column : columnIdentifiers) {
             row.add(getValue((String) column, rowData));
