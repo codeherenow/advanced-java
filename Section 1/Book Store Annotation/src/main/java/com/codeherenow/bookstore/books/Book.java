@@ -31,6 +31,10 @@ public class Book {
     @Column(index = 2)
     private String author;
 
+    /*
+     * Ordering fields by their indices is a good practice. I have placed this
+     * field here to demonstrate sorting.
+     */
     @Column(index = 0, name = "ISBN")
     private String isbn;
 

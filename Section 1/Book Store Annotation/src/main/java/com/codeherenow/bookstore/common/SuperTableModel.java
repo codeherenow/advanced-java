@@ -21,8 +21,7 @@ import org.apache.commons.lang.WordUtils;
 
 import javax.swing.table.DefaultTableModel;
 import java.lang.reflect.Field;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * This is the first attempt to create a {@link javax.swing.table.TableModel} using reflection.
@@ -38,13 +37,30 @@ public class SuperTableModel<T> extends DefaultTableModel {
          * access scope (depending upon where your access them reflectively). Since all fields
          * are private, we need to get `all` the fields declared by the Class.
          */
-        Field[] fields = modelClass.getDeclaredFields();
+        Field[] fields = getColumnFields(modelClass);
 
         // Column names
         setColumnIdentifiers(getColumnNames(fields));
 
         // Add rows
         addRows(fields, pojos);
+    }
+
+    private Field[] getColumnFields(Class<T> modelClass) {
+        List<Field> columnFields = new ArrayList<Field>();
+        Field[] declaredFields = modelClass.getDeclaredFields();
+        for (Field field : declaredFields) {
+            Column column = field.getAnnotation(Column.class);
+            if (column != null) {
+                columnFields.add(field);
+            }
+        }
+
+        // Sort
+        Collections.sort(columnFields, new ColumnFieldComparator());
+
+        // Convert to array
+        return columnFields.toArray(new Field[columnFields.size()]);
     }
 
     private Vector<String> getColumnNames(Field[] fields) {
@@ -97,5 +113,24 @@ public class SuperTableModel<T> extends DefaultTableModel {
             }
         }
         addRow(rowData);
+    }
+
+    /**
+     * A {@link java.util.Comparator} to sort fields based on the {@link Column#index()}
+     * attribute.
+     */
+    static class ColumnFieldComparator implements Comparator<Field> {
+
+        @Override
+        public int compare(Field lhs, Field rhs) {
+            Column lhsColumn = lhs.getAnnotation(Column.class);
+            Column rhsColumn = rhs.getAnnotation(Column.class);
+
+            int lhsIndex = lhsColumn.index();
+            int rhsIndex = rhsColumn.index();
+
+            return lhsIndex > rhsIndex ? 1
+                    : lhsIndex < rhsIndex ? -1 : 0;
+        }
     }
 }
