@@ -33,7 +33,8 @@ public class Main {
 
             @Override
             public void run() {
-                new BooksWindow("Toy Book Store").setVisible(true);
+                new BooksWindow("\"Genericized\" Book Store")
+                        .setVisible(true);
             }
         });
 
