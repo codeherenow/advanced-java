@@ -24,13 +24,18 @@ import com.codeherenow.bookstore.common.Column;
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
 public class Book {
+
+    @Column(index = 1)
     private String title;
+
+    @Column(index = 2)
     private String author;
 
-    @Column(name = "ISBN")
+    @Column(index = 0, name = "ISBN")
     private String isbn;
 
-    private double price;
+    @Column(index = 3)
+    double price;
 
     public Book(String title, String author, String isbn, double price) {
         this.title = title;
