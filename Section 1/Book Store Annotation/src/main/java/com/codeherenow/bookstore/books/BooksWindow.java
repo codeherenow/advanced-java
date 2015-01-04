@@ -16,7 +16,7 @@
 
 package com.codeherenow.bookstore.books;
 
-import com.codeherenow.bookstore.common.SuperTableModel;
+import com.codeherenow.bookstore.common.SmartTableModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -64,7 +64,7 @@ public class BooksWindow extends JFrame {
         List<Book> books = BooksRepository.getBooks();
 
         // Set the table model
-        SuperTableModel<Book> booksTableModel = new SuperTableModel<Book>(Book.class, books);
+        SmartTableModel<Book> booksTableModel = new SmartTableModel<Book>(Book.class, books);
         booksTable.setModel(booksTableModel);
     }
 

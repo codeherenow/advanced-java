@@ -29,9 +29,9 @@ import java.util.*;
  *
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
-public class SuperTableModel<T> extends DefaultTableModel {
+public class SmartTableModel<T> extends DefaultTableModel {
 
-    public SuperTableModel(Class<T> modelClass, List<T> pojos) {
+    public SmartTableModel(Class<T> modelClass, List<T> pojos) {
         /*
          * Class.getFields() will return the fields that can be accessed within the current
          * access scope (depending upon where your access them reflectively). Since all fields
