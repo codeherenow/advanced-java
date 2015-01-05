@@ -57,8 +57,7 @@ public class BooksWindow extends JFrame {
     private void initUi() {
         // Create a JTable, add it to a JScrollPane
         JTable booksTable = new JTable();
-        JScrollPane booksScrollPane = new JScrollPane(booksTable);
-        add(booksScrollPane);
+        add(new JScrollPane(booksTable));
 
         // Get the list of books
         List<Book> books = BooksRepository.getBooks();
