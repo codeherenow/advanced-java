@@ -27,7 +27,7 @@ import java.util.List;
  * @author Ragunath Jawahar <ragunathjawahar@gmail.com>
  */
 public class BooksWindow extends JFrame {
-    private static final int WIDTH = 800;
+    private static final int WIDTH = 1000;
     private static final int HEIGHT = 400;
 
     public BooksWindow(String title) {
@@ -56,6 +56,7 @@ public class BooksWindow extends JFrame {
         // Create a JTable, add it to a JScrollPane
         JTable booksTable = new JTable();
         add(new JScrollPane(booksTable));
+        setLargerFont(booksTable);
 
         // Create a table model and display data
         String[] columns = new String[]{
@@ -68,6 +69,13 @@ public class BooksWindow extends JFrame {
 
         BooksGenericTableModel booksGenericTableModel = new BooksGenericTableModel(columns, books);
         booksTable.setModel(booksGenericTableModel);
+    }
+
+    private void setLargerFont(JTable booksTable) {
+        // Set a larger font
+        Font font = new Font("Arial", Font.PLAIN, 18);
+        booksTable.getTableHeader().setFont(font);
+        booksTable.setFont(font);
     }
 
 }
