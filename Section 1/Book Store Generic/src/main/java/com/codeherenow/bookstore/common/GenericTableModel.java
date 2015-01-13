@@ -51,5 +51,5 @@ public abstract class GenericTableModel<T> extends DefaultTableModel {
         addRow(row);
     }
 
-    protected abstract String getValue(String columnName, T rowData);
+    protected abstract Object getValue(String columnName, T rowData);
 }

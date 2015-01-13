@@ -38,11 +38,11 @@ public class BooksTableModel extends DefaultTableModel {
     }
 
     public void addRow(Book book) {
-        Vector<String> row = new Vector<String>();
+        Vector row = new Vector();
         row.add(book.getTitle());
         row.add(book.getAuthor());
         row.add(book.getIsbn());
-        row.add(String.valueOf(book.getPrice()));
+        row.add(book.getPrice());
         addRow(row);
     }
 }

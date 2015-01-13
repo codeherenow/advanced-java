@@ -34,8 +34,8 @@ public class BooksGenericTableModel extends GenericTableModel<Book> {
     }
 
     @Override
-    protected String getValue(String columnName, Book book) {
-        String value;
+    protected Object getValue(String columnName, Book book) {
+        Object value;
 
         if ("Title".equals(columnName)) {
             value = book.getTitle();
@@ -43,10 +43,8 @@ public class BooksGenericTableModel extends GenericTableModel<Book> {
             value = book.getAuthor();
         } else if ("ISBN".equals(columnName)) {
             value = book.getIsbn();
-        } else if ("Author".equals(columnName)) {
-            value = book.getAuthor();
-        } else if ("Price".equals(columnName)) {
-            value = String.valueOf(book.getPrice());
+        }  else if ("Price".equals(columnName)) {
+            value = book.getPrice();
         } else {
             String message = String.format("Cannot find column: %s", columnName);
             throw new IllegalArgumentException(message);

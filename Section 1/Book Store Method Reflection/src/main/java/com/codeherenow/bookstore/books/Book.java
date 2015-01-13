@@ -79,7 +79,7 @@ public class Book {
         this.price = price;
     }
 
-    @Column(index = 2)
+    @Column(index = 2, name = "Author Name")
     public String getAuthorDisplayName() {
         return String.format("%s %s",
                 author.getFirstName(), author.getLastName());
